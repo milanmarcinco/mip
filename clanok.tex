@@ -32,87 +32,88 @@
 \maketitle
 
 \begin{abstract}
-Vývoj v oblasti technológií a informatiky ako takej napreduje ohromnou rýchlosťou už dlhé roky, a to bez akýchkoľvek náznakov dosahovania stropu. Ruka v ruke s ním rastie aj náročnosť počítačových hier a požiadavky na parametre hardvéru. Staršie generácie procesorov a grafických kariet už nedokážu poskytovať dostatočný výpočtový výkon pre nové herné tituly a vyžadujú si častú výmenu za nový, moderný kus. Jedným z možných riešení tohto problému je hranie v cloude (cloud gaming), čím sa zaoberá aj tento článok. Jedná sa o konceptovo veľmi jednoduchý, ale realizačne veľmi zložitý prístup. S aktuálne dostupnými technológiami a ich rozšírením má hranie v cloude mnoho zraniteľných miest a prekážok na ceste k dokonalosti.
+Vývoj v oblasti technológií a informatiky ako takej napreduje ohromnou rýchlosťou už dlhé roky, a to bez akýchkoľvek náznakov približovania sa k stropu. Ruka v ruke s ním rastie aj náročnosť počítačových hier a požiadavky na parametre hardvéru. Staršie generácie procesorov a grafických kariet už nedokážu poskytovať dostatočný výpočtový výkon pre nové herné tituly a vyžadujú si častú výmenu za nový, moderný kus. Jedným z možných riešení tohto problému je hranie v cloude (cloud gaming), čím sa zaoberá aj tento článok. Jedná sa o konceptovo veľmi jednoduchý, ale realizačne veľmi zložitý prístup. S aktuálne dostupnými technológiami a ich rozšírením má hranie v cloude mnoho zraniteľných miest a prekážok na ceste k dokonalosti.
 \end{abstract}
 
 
 
 \section{Úvod}
 
-Motivujte čitateľa a vysvetlite, o čom píšete. Úvod sa väčšinou nedelí na časti.
+\subsection{Čo je to cloud gaming?}
 
-Uveďte explicitne štruktúru článku. Tu je nejaký príklad.
-Základný problém, ktorý bol naznačený v úvode, je podrobnejšie vysvetlený v časti~\ref{nejaka}.
-Dôležité súvislosti sú uvedené v častiach~\ref{dolezita} a~\ref{dolezitejsia}.
-Záverečné poznámky prináša časť~\ref{zaver}.
+Cloud gaming alebo všeobecnejšie cloud computing je veľmi atraktívne, moderné riešenie pre hráčov dnešnej doby, vo forme predplatnej služby. Jedným z hlavných faktorov pri výbere nových komponentov hernej zostavy je okrem výkonu aj cena, ktorá vďaka globálnemu nedostatku čipov v nedávnej minulosti niekoľkokrát prekonala svoje predošlé maximá. Oblasť, v ktorej služba hrania v cloude vyniká, je práve pomer ceny, výkonu a aktuálnosti hardvéru, na ktorom herné tituly bežia. Tú si na svoju zodpovednosť berie poskytovateľ služby, čo je pre koncového používateľa veľkou výhodou.
 
 
 
-\section{Nejaká časť} \label{nejaka}
+\subsection{Ako to funguje?}
 
-Z obr.~\ref{f:rozhod} je všetko jasné. 
+Hlavná myšlienka, na ktorej celé hranie v cloude stojí, je presun výkonovo náročných výpočtových operácií z používateľovho osobného počítača do cloudu. Každému hráčovi sú v čase hrania priradené hardvérové prostriedky, vrátane procesorových jadier, pamäte RAM, jadier grafickej karty a úložného priestoru, zvyčajne typu SSD. Tieto prostriedky sú využívané na všetky výpočty potrebné k behu hry a enkódovanie výstupného obrazu. Takto zakódované video je potom po internetovej sieti v reálnom čase streamované do počítača koncového používateľa, kde je následne zobrazené. Rovnakým spôsobom je prenášaný aj vstup z klávesnice, myši a iných vstupných periférií do cloudu, kde je spracovávaný a kde ovplyvňuje priebeh hry a jej výstupný obraz.
 
-\begin{figure*}[tbh]
-\centering
-%\includegraphics[scale=1.0]{diagram.pdf}
-Aj text môže byť prezentovaný ako obrázok. Stane sa z neho označný plávajúci objekt. Po vytvorení diagramu zrušte znak \texttt{\%} pred príkazom \verb|\includegraphics| označte tento riadok ako komentár (tiež pomocou znaku \texttt{\%}).
-\caption{Rozhodujúci argument.}
-\label{f:rozhod}
-\end{figure*}
+V praxi to znamená, že počítač na strane používateľa je vyťažovaný len dekódovaním výstupného obrazu hry a spracovávaním a odosielaním vstupov, na čo je vo výsledku potrebný len zlomok výpočtového výkonu. To dovoľuje používateľovi použiť pri hraní v cloude takmer akékoľvek zariadenie, aj so staršími a pomalšími komponentami.\cite{7182690}
 
 
 
-\section{Iná časť} \label{ina}
-
-Základným problémom je teda\ldots{} Najprv sa pozrieme na nejaké vysvetlenie (časť~\ref{ina:nejake}), a potom na ešte nejaké (časť~\ref{ina:nejake}).\footnote{Niekedy môžete potrebovať aj poznámku pod čiarou.}
-
-Môže sa zdať, že problém vlastne nejestvuje\cite{Coplien:MPD}, ale bolo dokázané, že to tak nie je~\cite{Czarnecki:Staged, Czarnecki:Progress}. Napriek tomu, aj dnes na webe narazíme na všelijaké pochybné názory\cite{PLP-Framework}. Dôležité veci možno \emph{zdôrazniť kurzívou}.
+\section {Analýza}
 
 
-\subsection{Nejaké vysvetlenie} \label{ina:nejake}
 
-Niekedy treba uviesť zoznam:
+\subsection{Výhody oproti konvenčným herným zostavám\cite{10.1007/978-981-10-6620-7_71}}
 
 \begin{itemize}
-\item jedna vec
-\item druhá vec
-	\begin{itemize}
-	\item x
-	\item y
-	\end{itemize}
+
+\item Odpadá nutnosť vlastniť drahý, výkonný počítač a pravidelne ho modernizovať, čo značne zníži nie len počiatočné, ale celkové náklady počas niekoľkých rokov.
+
+\item Ukladanie progresu hry umožňuje pokračovať v hraní na rôznych zariadeniach z akéhokoľvek miesta, kde je stabilné internetové pripojenie.
+
+\item Veľkosť úložného priestoru nehrá rolu, a tak nie je limitom pre množstvo hier, z ktorých si môže používateľ vybrať. Týmto je zároveň značne zvýšená efektivita, keďže nepotrebuje každý používateľ osobitnú kópiu celej hry, ale je zdieľaná celým datacentrom.
+
+\item O funkčnosť a správny beh hardvéru sa stará poskytovateľ. Odpadajú tak akékoľvek starosti so servisom a zárukou hardvéru pre koncového užívateľa.
+
 \end{itemize}
 
-Ten istý zoznam, len číslovaný:
-
-\begin{enumerate}
-\item jedna vec
-\item druhá vec
-	\begin{enumerate}
-	\item x
-	\item y
-	\end{enumerate}
-\end{enumerate}
 
 
-\subsection{Ešte nejaké vysvetlenie} \label{ina:este}
+\subsection{Nevýhody (slabé stránky cloudu)\cite{10.1007/978-981-10-6620-7_71}}
 
-\paragraph{Veľmi dôležitá poznámka.}
+\begin{itemize}
 
-Niekedy je potrebné nadpisom označiť odsek. Text pokračuje hneď za nadpisom.
+\item V prípade neoptimálnej stability internetového pripojenia je zážitok z hier, najmä akčného multiplayer typu, viditeľne zníženy. Keďže sa všetky výpočty odohrávajú mimo počítača koncového užívateľa, každá akcia má nejakú odozvu, ktorá je v prípade týchto typov hier značné citeľná.
+
+\item Stabilné internetové pripojenie je stále v mnohých častiach sveta nedostupné, alebo je veľmi nákladné. V tomto prípade hranie v cloude už nie je múdrou alternatívou, a častokrát ani možné.
+
+\item Závislosť na prevádzkovateľovi služby je taktiež možnou nevýhodou. Akýkoľvek výpadok alebo útok na poskytovateľa znamená pre koncového používateľa neschopnosť službu využívať.
+
+\end{itemize}
 
 
 
-\section{Dôležitá časť} \label{dolezita}
+\subsection{Dostupné platformy a ich porovnanie}
+
+GeForce Now, Google Stadia, Xbox Cloud Gaming, PlayStation Now, Amazon Luna
 
 
 
+\subsubsection{Kvalita streamovania}
 
-\section{Ešte dôležitejšia časť} \label{dolezitejsia}
+\subsubsection{Knižnica dostupných hier}
+
+\subsubsection{Dostupnosť v krajinách}
+
+\subsubsection{Unikátne vlastnosti jednotlivých platforiem}
+
+\subsection{Výzvy a prekážky}
 
 
 
+\section{Zhodnotenie}
 
-\section{Záver} \label{zaver} % prípadne iný variant názvu
+\subsection{Cieľová skupina používateľov}
+
+\subsection{Cloud gaming ako budúcnosť herného priemyslu?}
+
+
+
+\section{Záver}
 
 
 
